@@ -1,0 +1,14 @@
+.row {
+    text-align: center;
+    display: flex;
+    flex-shrink: 1 1 200px;
+    justify-content: center;
+}
+
+img {
+    width: 90%;
+}
+
+.larger-margin {
+    margin: 100px;
+}
