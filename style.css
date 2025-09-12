@@ -1,0 +1,47 @@
+body {
+    background-color: rgb(30, 30, 46);
+    color: rgb(205, 214, 244);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+    color: rgb(137, 180, 250);
+}
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    
+}
+
+.content {
+    background-color: rgb(24, 24, 37);
+    margin-top: 5%;
+    width: 90%;
+    padding: 30px;
+
+    border-radius: 10px;
+    border-style: solid;
+    border-color: rgb(108, 112, 134);
+    border-width: 1px;
+}
+
+.project {
+    background-color: rgb(49, 50, 68);
+    color: rgb(205, 214, 244);
+    text-decoration: none;
+
+    padding: 30px;
+    width: 20%;
+    aspect-ratio: 1 / 1;
+    margin: 10px;
+    border-radius: 10px;
+    display: block;
+}
+
+.projects-container {
+    text-align: center;
+    display: flex;
+    flex-shrink: 1 1 200px;
+    justify-content: center;
+}
