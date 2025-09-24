@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+}
+
+.page_description {
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+.pagelink_row {
+    display: flex;
+    justify-content: center;
+}
+
+.pagelink_row > a > h3{
+    text-align: center;
+}
+
+.pagelink_row > a {
+    background-color: rgb(27, 144, 212);
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+
+    padding: 30px;
+    width: 15%;
+    aspect-ratio: 1 / 1;
+    margin: 20px;
+    display: block;
+}
+
+.nav {
+    background-color: rgb(43, 109, 48);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-top: -8px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav a:hover {
+    text-decoration: underline;
+    color: limegreen;
+}
+
+.nav > ul {
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: 10%;
+    margin-right: 10%
+}
+
+.nav > ul > li {
+    color: rgb(43, 109, 48);
+}
+
+.code_editor {
+    tab-size: 4;
+}
