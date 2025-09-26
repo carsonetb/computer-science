@@ -16,10 +16,12 @@
                 <li><a href="navigation_bar">Navigation Bar</a></li>
             </ul>
         </div>
-        <h1>HTML Tutorials</h1>
-        <p class="page_description">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <div class="contents">
+            <h1>HTML Tutorials</h1>
+            <p class="page_description">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
         <div class="pagelink_row">
             <a href="html_reference" class="pagelink">
                 <h3>HTML Reference</h1>
@@ -48,11 +50,11 @@
                 <p>Lorem ipsum dolar sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
             </a>
         </div>
-        <div id="code_editor">
-            <textarea class="code_editor" id="css_box", rows="10" cols="80"></textarea>
-            <textarea class="code_editor" id="textbox", rows="10" cols="80"></textarea>
-            <div id="htmlhere"></div>
-        </div>
+            <div class="editor_container" id="code_editor">
+                <textarea custom_html="<p>hell</p>" class="code_editor" id="css_box", rows="50" cols="80"></textarea>
+                <textarea custom_css="p {font-family: arial}" class="code_editor" id="textbox", rows="10" cols="80"></textarea>
+                <div id="htmlhere"></div>
+            </div>
         <script src="script.js"></script>
     </body>
 </html>

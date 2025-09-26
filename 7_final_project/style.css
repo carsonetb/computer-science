@@ -13,8 +13,6 @@ h1 {
 
 .page_description {
     text-align: center;
-    margin-left: 25%;
-    margin-right: 25%;
 }
 
 .pagelink_row {
@@ -70,4 +68,14 @@ h1 {
 
 .code_editor {
     tab-size: 4;
+}
+
+.contents {
+    margin-left: 25%;
+    margin-right: 25%;
+    justify-content: center;
+}
+
+.editor_container {
+    display: flex;
 }
