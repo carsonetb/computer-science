@@ -10,7 +10,7 @@
                 <li><a href="html_reference">Reference</a></li>
                 <li><a href="wikipedia_imitation">Wikipedia</a></li>
                 <li><a href="restyle_webpage">Restyle</a></li>
-                <li><a href=".">Home</a></li>
+                <li><a href="..">Home</a></li>
                 <li><a href="floating_divs">Floating Divs</a></li>
                 <li><a href="flexbox">Flexbox</a></li>
                 <li><a href="navigation_bar">Navigation Bar</a></li>
@@ -19,13 +19,117 @@
         <div class="contents">
             <h1>HTML Reference</h1>
             <p class="page_description">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                Below you can type HTML in the left box and the generated content will appear 
+                generated in the right box. Test it out by typing some text in the box below.
             </p>
         </div>
-            <div class="editor_container" id="code_editor">
-                <textarea custom_css=" " class="code_editor" id="textbox", rows="50" cols="70"></textarea>
-                <div id="htmlhere"></div>
-            </div>
+        <div class="editor_container" id="code_editor">
+            <textarea custom_css=" " class="code_editor" id="textbox", rows="5" cols="70"></textarea>
+            <div id="htmlhere"></div>
+        </div>
+        <div class="contents">
+            <h1>Tags</h1>
+            <p class="page_description">
+                HTML is made up of tags. Tags are written like this: <span class="mono">
+                &lt;tag_name&gt;...&lt;/tag_name&gt;</span>. Inside is whatever contents
+                it has, usually either text, or more tags. One of the most common tags, 
+                which is used for text is the "p" tag (if you type in the box it will render):
+            </p>
+        </div>
+        <div class="editor_container" id="code_editor">
+            <textarea custom_css=" " class="code_editor" id="textbox", rows="5" cols="70">
+&lt;p&gt;
+    This is the place that you'd type your paragraph. Because
+    the paragraph is pretty long you should split it up into 
+    multiple lines to make the code neater.
+&lt;/p&gt;</textarea>
+            <div id="htmlhere"></div>
+        </div>
+        <div class="contents">
+            <p class="page_description">
+                There are also tags for title text, subtitle, or generally just any larger
+                text that you might need.
+            </p>
+        </div>
+        <div class="editor_container" id="code_editor">
+            <textarea custom_css=" " class="code_editor" id="textbox", rows="6" cols="70">
+&lt;h1&gt;The largest! (Heading 1)&lt;/p&gt;
+&lt;h2&gt;The second largest! (Heading 2)&lt;/p&gt;
+&lt;h3&gt;The third largest! (Heading 3)&lt;/p&gt;
+&lt;h4&gt;Pretty small now! (Heading 4)&lt;/p&gt;
+&lt;h5&gt;Smaller than P! (Heading 5)&lt;/p&gt;
+&lt;h6&gt;Tiny! (Heading 6)&lt;/p&gt;</textarea>
+            <div id="htmlhere"></div>
+        </div>
+        <div class="contents">
+            <h1>Baggage</h1>
+            <p class="page_description">
+                These elements are cool, but of course, everything cool comes with some 
+                baggage that must be setup in order for everything to work properly. 
+                <br>
+                There are three important tags to learn:
+            </p>
+            <ul>
+                <li><span class="mono">&lt;html&gt;</span> - Surrounds all of the code.</li>
+                <li><span class="mono">&lt;head&gt;</span> - Surrounds the part where the <span class="mono">&lt;title&gt;</span> tag is.</li>
+                <li><span class="mono">&lt;body&gt;</span> - Surrounds all of the tags from before, and more</li>
+                <li><span class="mono">&lt;title&gt;</span> - Goes in the <span class="mono">&lt;head&gt;</span>and sets the title of the page, shown on the tab</li>
+            </ul>
+            <p class="page_description">
+                There is an example of everything in use below. Try to delete 
+                everything and then edit it to see what you can make.
+            </p>
+        </div>
+        <div class="editor_container" id="code_editor">
+            <textarea custom_css=" " class="code_editor" id="textbox", rows="20" cols="70">
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;The title of the web page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;The largest! (Heading 1)&lt;/p&gt;
+        &lt;h2&gt;The second largest! (Heading 2)&lt;/p&gt;
+        &lt;h3&gt;The third largest! (Heading 3)&lt;/p&gt;
+        &lt;h4&gt;Pretty small now! (Heading 4)&lt;/p&gt;
+        &lt;h5&gt;Smaller than P! (Heading 5)&lt;/p&gt;
+        &lt;h6&gt;Tiny! (Heading 6)&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</textarea>
+            <div id="htmlhere"></div>
+        </div>
+        <div class="contents">
+            <p class="page_description">
+                And there are a few more tags for styling text, which I will show you 
+                in the form of code, because the really speak for themselves:
+            </p>
+        </div>
+        <div class="editor_container" id="code_editor">
+            <textarea custom_css=" " class="code_editor" id="textbox", rows="10" cols="70">
+    &lt;b&gt;This text is bold&lt;/b&gt;&lt;br&gt;
+    &lt;i&gt;This text is italic&lt;/i&gt;&lt;br&gt;
+    &lt;a href="https://wikipedia.org"&gt;This is a link, more on that in a second&lt;/a&gt;&lt;br&gt;
+    &lt;img src="cookie.png"&gt;Here is an image, the file path is inside those quotes</textarea>
+            <div id="htmlhere"></div>
+        </div>
+        <div class="contents">
+            <p class="page_description">
+                There are two tags in there that probably need a little extra description:
+            </p>
+            <ul>
+                <li>The a tag: This is a link, meaning if you click on it it will go to
+                    another website, or page on your website. These "paths" act exactly
+                    like file paths on the computer, because they literally are linking 
+                    to folders or (html) files on the computer. 
+                </li>
+                <li>The img tag. This is an image. It works similarly to the a tag in that 
+                    you also have to link another file. The difference is, the file is now 
+                    being displayed as an image. In this instance, there is a cookie.png 
+                    (hopefully) on the server that is hosting this website, and that file 
+                    is getting sent to your computer when the image is rendered.
+                </li>
+            </ul>
+        </div>
+
         <script src="../script.js"></script>
     </body>
 </html>

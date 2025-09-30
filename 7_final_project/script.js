@@ -38,11 +38,11 @@ code_editors.forEach(element => {
                         break;
                     }
                 }
-                if (line.trim().endsWith(">") && !line.split("<").reverse()[0].includes("/")) {
+                if (line.trim().endsWith(">") && !to_selection.split("<").reverse()[0].includes("/")) {
                     tabs += 1;
                 }
                 to_cursor = to_selection + "\n" + "\t".repeat(tabs);
-                this.value = to_cursor + (from_selection.startsWith("<") ? "\n" + "\t".repeat(tabs - 1) : "") + from_selection
+                this.value = to_cursor + (from_selection.startsWith("<") ? "\n" + "\t".repeat(Math.max(tabs - 1, 0)) : "") + from_selection
                 this.selectionStart = to_cursor.length
                 this.selectionEnd = to_cursor.length
             }
@@ -76,7 +76,14 @@ code_editors.forEach(element => {
 
 code_editors.forEach(element => {element.querySelector("#textbox").addEventListener("input", function(e) {
     parent = this.parentNode
-    parent.querySelector("#htmlhere").innerHTML = "<div class=\"fakebody\">" + e.target.value + "</div>"
+    if (e.target.value.includes("<script>")) {
+        e.target.value = ""
+        alert("You can't have scripts! I will now happily delete all your work");
+        return;
+    }
+    else {
+        parent.querySelector("#htmlhere").innerHTML = "<div class=\"fakebody\">" + e.target.value + "</div>"
+    }
 })})
 
 code_editors.forEach(element => {
@@ -100,9 +107,9 @@ function css_pressed(e) {
 function set_css(unsanitized) {
     var css = "#htmlhere {width: 50%; padding: 20px; background-color: white; color: black; font-family: serif} #htmlhere h1 {text-align: left}"
     for (i = 0; i < unsanitized.split("}").length - 1; i++) {
-        css += "#htmlhere " + unsanitized.split("}")[i] + "}"
+        css += "#htmlhere " + unsanitized.split("}")[i] + ""
     }
-    css.replaceAll("body {", "#htmlhere {")
+    console.log(css)
     document.getElementById("custom-style").textContent = css
 
 }

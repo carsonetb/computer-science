@@ -10,11 +10,6 @@ body {
 h1 {
     text-align: center;
 }
-
-.page_description {
-    text-align: center;
-}
-
 .pagelink_row {
     display: flex;
     justify-content: center;
@@ -78,4 +73,18 @@ h1 {
 
 .editor_container {
     display: flex;
+}
+
+.mono {
+    font-family: monospace;
+    background-color: rgb(39, 39, 39);
+    border-radius: 6px;
+    padding: 3px;
+}
+
+.codebox {
+    font-family: monospace;
+    background-color: rgb(39, 39, 39);
+    border-radius: 6px;
+    padding: 10px;
 }
