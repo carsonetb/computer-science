@@ -1,0 +1,143 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../style.css">
+        <title>HTML Reference</title>
+        <style id="custom-style"></style>
+    </head>
+    <body>
+        <div class="nav">
+            <ul>
+                <li><a href="html_reference">Reference</a></li>
+                <li><a href="wikipedia_imitation">Wikipedia</a></li>
+                <li><a href="restyle_webpage">Restyle</a></li>
+                <li><a href="..">Home</a></li>
+                <li><a href="floating_divs">Floating Divs</a></li>
+                <li><a href="flexbox">Flexbox</a></li>
+                <li><a href="navigation_bar">Navigation Bar</a></li>
+            </ul>
+        </div>
+        <div class="contents">
+            <h1>Wikipedia</h1>
+            <p class="page_description">
+                Wikipedia is an encyclopedia that is community maintained.
+                You probably know what it is, and according to the great 
+                teacher of all things on the interwebz, it apparently used
+                to look like this:
+                <br>
+                <img class="roman-forum" src="image.png">
+                It is important to note that the teacher was a Linux (probably
+                Ubuntu) user. Dully note that Ubuntu today is considered a 
+                relic of simpler times, when worries were few, compared to 
+                today's more advanced systems of operation. Indeed, before 
+                we continue it is also important to note that the teacher was
+                a Firefox user. This was before the great downfall of Mozilla
+                and the scattering of forks.
+                <br>
+                <br>
+                Anyway, at this stage of your humble journey, it would most 
+                likely be impossible for you to recreate this image correctly.
+                It's time to learn a new tool.
+            </p>
+            <h1>CSS</h1>
+            <p class="page_description">
+                CSS stands for Cascading Style Sheets, and is the last of the 
+                three pillars of the web. Essentially, it makes the website
+                act a certain way, it <i>customizes</i> the tags. Usually, 
+                you will write CSS in a seperate file, hidden away from the 
+                HTML and abstracted into a link, but sometimes, in special 
+                cases or simply because the user is archaic, you will find 
+                CSS in the lines of HTML. Hence the name inline.
+                <br>
+                <br>
+                Below is a simple program. Type in both the boxes to update
+                the HTML (tags) and the CSS (styles).
+            </p>
+        </div>
+        <div class="editor_container" id="code_editor">
+            <textarea class="code_editor" id="textbox", rows="5" cols="70">&lt;p&gt;Some Text&lt;/p&gt;</textarea>
+            <textarea class="code_editor" id="cssbox", rows="5" cols="70">p { font-family: arial; color: red; }</textarea>
+            <div id="htmlhere"></div>
+        </div>
+        <div class="contents">
+            <p class="page_description">
+                If you delete the strange text from the middle box, you will
+                see that the generated HTML's font changes from a sans serif 
+                font (arial) that is colored red, to a black seriffed font
+                (most likely 
+                <span style="font-family: 'Times New Roman', Times, serif">Times New Roman</span>).
+                <br>
+                <br>
+                As you can see, the CSS is styling the HTML. You can sort of 
+                gather how the syntax works:
+                <ul>
+                    <li>Each tag can have styles. In this case it is p, so 
+                        you would start by typing the p tag and then an open
+                        curly brace ({)
+                    </li>
+                    <li>There are a very large amount of attributes a tag can
+                        have. In this case we used the font-family attribute 
+                        and the color attribute. When using attributes, you 
+                        should frame them like this: attribute: value; making 
+                        sure to have the semicolon at the end.
+                    </li>
+                    <li>End each tag with a closing curly bracket (})</li>
+                </ul>
+                CSS also has the concept of classes. Here is what they look
+                like in action:
+            </p>
+        </div>
+        <div class="editor_container" id="code_editor">
+            <textarea class="code_editor" id="textbox", rows="5" cols="70">&lt;p class="text"&gt;Some Text&lt;/p&gt;</textarea>
+            <textarea class="code_editor" id="cssbox", rows="5" cols="70">.text { font-family: arial; color: red; }</textarea>
+            <div id="htmlhere"></div>
+        </div>
+        <div class="contents">
+            <p class="page_description">
+                As you can see, instead of the p tag we are using the .text 
+                class in CSS. This comes in handy when you want to have 
+                different styles for different tags. 
+            </p>
+            <h1>Float</h1>
+            <p class="page_description">Here is an image:</p>
+        </div>
+        <div class="editor_container" id="code_editor">
+            <textarea custom_css=" " class="code_editor" id="textbox", rows="5" cols="70">&lt;img src="cookie.png" width=50%&gt;</textarea>
+            <div id="htmlhere"></div>
+        </div>
+        <div class="contents">
+            <p class="page_description">And here is an image on the right:</p>
+        </div>
+        <div class="editor_container" id="code_editor">
+            <textarea lass="code_editor" id="textbox", rows="5" cols="70">
+&lt;img src="cookie.png" width=50%&gt;
+&lt;p&gt;
+    Here is some text also
+    &lt;br&gt;
+    &lt;br&gt;
+    &lt;br&gt;
+    &lt;br&gt;
+    that goes down far
+&lt;/p&gt;</textarea>
+            <textarea class="code_editor" id="cssbox", rows="5" cols="70">
+img {
+    float: right;
+}</textarea>
+            <div id="htmlhere"></div>
+        </div>
+        <div class="contents">
+            <p class="page_description">
+                Note that the text element has to go after 
+                the image for them to be side by side. You
+                can also choose to put another div/img and 
+                float it to the left to make two objects 
+                that are adjacent.
+                <br>
+                <br>
+                Now supposedly you should have all the skills
+                neccesary to develop a website that looks 
+                somewhat similar to the one shown earlier.
+            </p>
+        </div>
+        <script src="../script.js"></script>
+    </body>
+</html>

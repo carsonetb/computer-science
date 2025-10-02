@@ -94,8 +94,9 @@ code_editors.forEach(element => {
 })
 
 function css_pressed(e) { 
+    console.log("hi")
     parent = this.parentNode
-    var unsanitized = parent.querySelector("#css_box").value
+    var unsanitized = parent.querySelector("#cssbox").value
     set_css(unsanitized);
 
     var custom_html = this.getAttribute("custom_html")
@@ -107,7 +108,7 @@ function css_pressed(e) {
 function set_css(unsanitized) {
     var css = "#htmlhere {width: 50%; padding: 20px; background-color: white; color: black; font-family: serif} #htmlhere h1 {text-align: left}"
     for (i = 0; i < unsanitized.split("}").length - 1; i++) {
-        css += "#htmlhere " + unsanitized.split("}")[i] + ""
+        css += "#htmlhere " + unsanitized.split("}")[i] + "}"
     }
     console.log(css)
     document.getElementById("custom-style").textContent = css

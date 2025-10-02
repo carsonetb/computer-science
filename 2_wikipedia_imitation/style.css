@@ -1,9 +1,3 @@
-.flow-box {
-    border: 4px solide red;
-    border-radius: 5px;
-    inline-size: 160px;
-    overflow-wrap: break-word;
-}
 
 .forum-image {
     float: right;
