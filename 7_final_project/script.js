@@ -74,7 +74,7 @@ code_editors.forEach(element => {
             }
 })}})
 
-code_editors.forEach(element => {element.querySelector("#textbox").addEventListener("input", function(e) {
+code_editors.forEach(element => {if (!element.querySelector("#textbox")) {return;} element.querySelector("#textbox").addEventListener("input", function(e) {
     parent = this.parentNode
     if (e.target.value.includes("<script>")) {
         e.target.value = ""
@@ -108,7 +108,11 @@ function css_pressed(e) {
 function set_css(unsanitized) {
     var css = "#htmlhere {width: 50%; padding: 20px; background-color: white; color: black; font-family: serif} #htmlhere h1 {text-align: left}"
     for (i = 0; i < unsanitized.split("}").length - 1; i++) {
-        css += "#htmlhere " + unsanitized.split("}")[i] + "}"
+        tag = unsanitized.split("}")[i]
+        if (tag.includes("body")) {
+            tag = "{" + tag.split("{")[1]
+        }
+        css += "#htmlhere " + tag + "}"
     }
     console.log(css)
     document.getElementById("custom-style").textContent = css
