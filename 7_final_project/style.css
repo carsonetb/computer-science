@@ -1,10 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
-    background-color: black;
-    color: white;
+    background-color: #1e1e2e;
+    color: #cdd6f4;
 }
 
 h1 {
@@ -20,8 +17,8 @@ h1 {
 }
 
 .pagelink_row > a {
-    background-color: rgb(27, 144, 212);
-    color: rgb(0, 0, 0);
+    background-color: #313244;
+    color: #bac2de;
     text-decoration: none;
 
     padding: 30px;
@@ -32,7 +29,7 @@ h1 {
 }
 
 .nav {
-    background-color: rgb(43, 109, 48);
+    background-color: #313244;
     padding-top: 10px;
     padding-bottom: 10px;
     margin-left: -8px;
@@ -42,12 +39,12 @@ h1 {
 
 .nav a {
     text-decoration: none;
-    color: white;
+    color: #bac2de;
 }
 
 .nav a:hover {
     text-decoration: underline;
-    color: limegreen;
+    color: #89dceb;
 }
 
 .nav > ul {
@@ -58,11 +55,19 @@ h1 {
 }
 
 .nav > ul > li {
-    color: rgb(43, 109, 48);
+    color: #313244;
 }
 
 .code_editor {
     tab-size: 4;
+    border-radius: 10px;
+    border: 2px solid #6c7086;
+    background-color: #313244;
+    resize: none;
+    color: #cdd6f4;
+    padding: 12px;
+    scrollbar-color: #45475a #7f849c;
+    margin: 5px;
 }
 
 .contents {

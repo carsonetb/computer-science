@@ -106,7 +106,7 @@ function css_pressed(e) {
 }
 
 function set_css(unsanitized) {
-    var css = "#htmlhere {width: 50%; padding: 20px; background-color: white; color: black; font-family: serif} #htmlhere h1 {text-align: left}"
+    var css = "#htmlhere {width: 50%; padding: 20px; background-color: #313244; color: rgb(205, 214, 244); font-family: serif; border-radius: 10px; margin: 5px; } #htmlhere h1 {text-align: left}"
     for (i = 0; i < unsanitized.split("}").length - 1; i++) {
         tag = unsanitized.split("}")[i]
         if (tag.includes("body")) {
