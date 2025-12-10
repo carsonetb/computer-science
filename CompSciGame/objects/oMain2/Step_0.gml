@@ -6,12 +6,21 @@ var up = keyboard_check(vk_up)
 var down = keyboard_check(vk_down)
 var boost = keyboard_check(vk_space) * 2
 var shoot_fireball = keyboard_check_pressed(vk_lshift)
+var jump = keyboard_check_pressed(vk_up)
 
 if (global.health <= 0) {
 	global.points = 0
 	global.health = 5
-	room_goto(0)
+	global.y_position = 0
+	room_goto(Room08)
 }
+
+if (jump and jumps < 2) {
+	jumps += 1
+	vel_y = -8
+}
+
+global.y_position = y
 
 fireball_timer -= 1
 if (shoot_fireball and global.points > 0 and fireball_timer <= 0) {
@@ -39,8 +48,14 @@ if (global.enemies_killed >= 2) {
 }
 
 var vel_x = right - left 
-vel_y += 1
+vel_y += 0.4
 
+if (place_meeting(x, y, oVoid)) {
+	global.points = 0
+	global.health = 5
+	global.y_position = 0
+	room_goto(Room08)
+}
 
 sprite_index = asset_get_index("mc_walkright")
 
@@ -55,6 +70,8 @@ var new_pos_x = x + vel_x * (1 + boost * 2)
 var new_pos_y = y + vel_y
 var collision = false
 if (place_meeting(new_pos_x, y, oRock)) {
+	on_ground = true
+	jumps = 0
 	new_pos_x = x
 	while (!place_meeting(new_pos_x, y, oRock)) {
 		new_pos_x += sign(vel_x) * 0.1
@@ -62,12 +79,18 @@ if (place_meeting(new_pos_x, y, oRock)) {
 	new_pos_x -= sign(vel_x) * 0.2
 }
 if (place_meeting(x, new_pos_y, oRock)) {
+	on_ground = true
+	jumps = 0
 	new_pos_y = y
 	while (!place_meeting(x, new_pos_y, oRock)) {
 		new_pos_y += sign(vel_y) * 0.1
 	}
-	new_pos_y -= sign(vel_y) * 0.2
+	new_pos_y -= sign(vel_y) * 0.11
 	vel_y = 0
+}
+
+if (vel_y != 0) {
+	on_ground = false
 }
 x = new_pos_x
 y = new_pos_y
