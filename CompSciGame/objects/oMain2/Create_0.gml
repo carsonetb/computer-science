@@ -15,4 +15,4 @@ fireball_timer = 0
 vel_y = 0
 
 on_ground = false
-jumps = 0
+jumps = 2
