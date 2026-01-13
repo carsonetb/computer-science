@@ -1,5 +1,5 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-frame = random_range(0, 5)
-depth = -5
+this_health -= 1
+instance_destroy(other)

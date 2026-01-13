@@ -12,6 +12,7 @@ if (global.health <= 0) {
 	global.points = 0
 	global.health = 5
 	global.y_position = 0
+	global.is_boss = false
 	room_goto(Room08)
 }
 
@@ -54,6 +55,7 @@ if (place_meeting(x, y, oVoid)) {
 	global.points = 0
 	global.health = 5
 	global.y_position = 0
+	global.is_boss = false
 	room_goto(Room08)
 }
 
@@ -108,4 +110,12 @@ if (invinsible) {
 		invinsible_timer = 0
 		invinsible = false
 	}
+}
+	
+show_debug_message(global.is_boss)
+if (global.is_boss && oBoss.drawing_lines && collision_line(oBoss.line1_x1, oBoss.line1_y1, oBoss.lines_target_x, oBoss.lines_target_y, oMain2, true, false) && !invinsible) {
+	image_alpha = 0.2
+	global.health -= 1
+	invinsible = true
+	invinsible_timer = 60
 }

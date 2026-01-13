@@ -1,5 +1,11 @@
 /// @description Insert description here
 // You can write your code in this editor
 
-frame = random_range(0, 5)
-depth = -5
+
+
+
+
+time_left = random_range(60 * 10, 30 * 60)
+
+visible = false
+visible = false

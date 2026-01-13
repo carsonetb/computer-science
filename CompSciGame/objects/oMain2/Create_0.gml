@@ -4,6 +4,9 @@
 if (variable_global_exists("y_position") and global.y_position != 0) {
 	y = global.y_position
 }
+if (!variable_global_exists("is_boss")) {
+	global.is_boss = false
+}
 
 global.enemies_killed = 0
 
